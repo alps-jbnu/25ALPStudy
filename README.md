@@ -10,3 +10,4 @@ ex) `25ALPStudy/Basic/AFpine/Queue`
 4. 주제 폴더에 자신의 풀이 코드 작성  
 ex) `25ALPStudy/Basic/AFpine/Queue/BOJ_10845.cpp`
 5. Pull Request
+6.
