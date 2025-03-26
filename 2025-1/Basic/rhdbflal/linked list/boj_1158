@@ -1,0 +1,48 @@
+#include <iostream>
+#include <vector>
+#include <list>
+
+using namespace std;
+
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	list<int> l;
+	list<int>::iterator it;
+	vector<int> answer;
+
+	int n, k;
+	cin >> n >> k;
+
+	for (int i = 1; i <= n; i++) {
+		l.push_back(i);
+	}
+
+	it = l.begin();
+	while (!l.empty()) {
+		for (int i = 0; i < k - 1; i++) {
+			it++;
+
+			if (it == l.end()) {
+				it = l.begin();
+			}
+		}
+
+		answer.push_back(*it);
+		it = l.erase(it);
+
+		
+		if (it ==l.end()) {
+			it = l.begin();
+		}
+	}
+
+	cout << "<";
+	for (int i = 0; i < n; i++) 
+		cout << answer[i] << (i < n - 1 ? ", " : "");
+	cout << ">\n";
+
+	return 0;
+}

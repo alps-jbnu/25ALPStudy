@@ -1,0 +1,38 @@
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+int main(void) {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    int n;
+    cin >> n;
+
+    string init;
+    list<char> password;
+    list<char>::iterator it;
+
+    for (int i = 0;i < n;i++) {
+        cin >> init;
+        password.clear();
+        it = password.begin();
+        for (int j = 0;j < init.length();j++) {
+            if (init[j] == '<' && it != password.begin())
+                it--;
+            else if (init[j] == '>' && it != password.end())
+                it++;
+            else if (init[j] == '-' && it != password.begin())
+                it = password.erase(--it);
+            else if (init[j] != '<' && init[j] != '>' && init[j] != '-')
+                password.insert(it, init[j]);
+        }
+        for (it = password.begin();it != password.end();it++)
+            cout << *it;
+        cout << endl;
+
+    }
+
+    return 0;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+
+int main(void) {
+	ios::sync_with_stdio(0);
+	cin.tie(0);	
+	
+	int roomnum;
+	cin >> roomnum;
+
+	int arr[10] = { 0 };
+	for (;roomnum != 0;roomnum /=10)
+		arr[roomnum%10]++;
+	
+	int max=0;
+	
+	arr[6] = (arr[6] + arr[9] + 1) / 2;
+
+	for (int i = 0; i < 9; i++) { 
+		if (max < arr[i])
+			max = arr[i];
+	}
+	std::cout << max;
+	return 0;
+
+}
