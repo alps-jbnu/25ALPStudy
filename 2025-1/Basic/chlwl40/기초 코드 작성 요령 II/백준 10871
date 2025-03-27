@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+    int arr[10001]={0},a,b,k,i=0,sum=0;
+
+    scanf("%d %d",&a,&b);
+
+    while(1)
+        {
+            i++;
+
+            scanf("%d",&k);
+
+            if(k<b)
+                printf("%d ",k);
+            if(i==a)
+                break;
+        }
+   
+}

@@ -1,0 +1,43 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+  
+       long long int a,b,i=0,c;
+    scanf("%lld %lld",&a,&b);
+    if(a<b)
+    printf("%lld\n",b-a-1);
+    if(a>b)
+    printf("%lld\n",a-b-1);
+    if(a==b)
+        printf("0\n");
+    i=a;
+    if(a!=b && (a-b > 1 || a-b < -1 ))
+    {
+      c=a-b;
+        if(a<b)
+        {
+            c=c*-1;
+            i=a;
+            while(1)
+                {
+                    a++;
+                    printf("%lld ",a);
+                    if(a==b-1)
+                        break;
+                }
+        }
+         if(a>b)
+        {
+            i=b;
+            while(1)
+                {
+                    b++;
+                    printf("%lld ",b);
+                    if(b==a-1)
+                        break;
+                }
+        }
+    }
+}

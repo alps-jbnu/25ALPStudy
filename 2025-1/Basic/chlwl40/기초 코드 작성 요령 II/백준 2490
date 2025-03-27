@@ -1,0 +1,36 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+  
+ int arr[5],i=0,j=0,one=0;
+
+    while(1)
+        {
+            i++;
+            while(1)
+                {
+                    j++;
+                    scanf("%d",&arr[j]);
+                    if(arr[j]==1)
+                        one++;
+                    if(j==4)
+                        break;
+                }
+            if(one==0)
+                printf("D\n");
+            if(one==1)
+                printf("C\n");
+            if(one==2)
+                printf("B\n");
+            if(one==3)
+                printf("A\n");
+            if(one==4)
+                printf("E\n");
+            one=0;
+            j=0;
+            if(i==3)
+                break;
+        }
+}

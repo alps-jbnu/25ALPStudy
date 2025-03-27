@@ -1,0 +1,151 @@
+#include <iostream>
+#include <string>
+using namespace std;
+/*   
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+   4
+
+5 9
+4 7
+3 5
+2 3
+1 1
+
+   
+   */
+
+int main() {
+
+    /*
+1
+1
+2
+1 3
+3
+1 3 5
+4
+1 3 5 7
+5
+1 3 5 7 9
+2n-1
+*/
+
+    int N,i=0,j=0,check,star=-1,blank;
+
+    scanf("%d",&N);
+
+    if(N==1)
+    {
+        printf("*");
+    }
+    else{
+    check=(2*N)-1;
+    while(1)
+        {
+            i++;
+            
+            
+            
+            star=star+2;
+            blank=(check-star)/2;
+            if(blank==0)
+                break;
+            while(1)
+                {
+                    j++;
+                    printf(" ");
+
+                    if(j==blank)
+                        break;
+                }
+            j=0;
+            while(1)
+                {
+                    j++;
+                    printf("*");
+
+                    if(j==star)
+                        break;
+                    
+                }
+   
+            j=0;
+            
+            
+            if(i==N)
+                break;
+
+            
+            printf("\n");
+            
+            
+        }
+
+    i=0;
+    while(1)
+        {
+            i++;
+            printf("*");
+            if(i==check)
+                break;
+        }
+
+printf("\n");
+
+i=0;
+j=0;
+star=check;
+    while(1)
+        {
+            i++;
+            
+            
+            
+            star=star-2;
+            blank=(check-star)/2;
+            
+            
+            while(1)
+                {
+                    j++;
+                    printf(" ");
+
+                    if(j==blank)
+                        break;
+                }
+            j=0;
+            while(1)
+                {
+                    j++;
+                    printf("*");
+
+                    if(j==star)
+                        break;
+                    
+                }
+   
+            j=0;
+            
+            
+            if(i==N-1)
+                break;
+
+            
+            printf("\n");
+            
+            
+        }
+
+
+
+    
+    }
+}
+
+    

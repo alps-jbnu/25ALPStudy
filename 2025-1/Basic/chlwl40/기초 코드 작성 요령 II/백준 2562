@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int arr[10],i=0,index,max;
+    while(1)
+        {
+            i++;
+            scanf("%d",&arr[i]);
+            if(i==9)
+                break;
+        }
+    max=arr[1];
+    index=1;
+    i=0;
+    while(1)
+        {
+            i++;
+            if(max<=arr[i+1])
+            {
+                max=arr[i+1];
+                index=i+1;
+            }
+            if(i==8)
+                break;
+        }
+    printf("%d\n%d",max,index);
+}

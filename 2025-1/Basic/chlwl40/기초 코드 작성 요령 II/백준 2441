@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int n,i=-1,j=0;
+    scanf("%d",&n);
+
+
+    while(1)
+        {
+            i++;
+        if(i!=0)
+        while(1)
+            {
+                j++;
+                printf(" ");
+                if(j==i)
+                    break;
+            }
+        while(1)
+            {
+                j++;
+                printf("*");
+                if(j==n)
+                    break;
+            }
+            j=0;
+            printf("\n");
+            if(i==n-1)
+                break;
+        }
+}
