@@ -24,7 +24,8 @@
         "text_encoding": "cpp",
         "regex": "cpp",
         "valarray": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "1464_make1": "cpp"
     },
     "BOJ-Tester.defaultLanguage": "cpp",
     "C_Cpp.errorSquiggles": "disabled"
