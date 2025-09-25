@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.erd": "json",
+        "*.vuerd": "json",
+        "vector": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "__bit_reference": "cpp"
+    }
+}
