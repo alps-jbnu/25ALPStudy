@@ -38,18 +38,17 @@ int main(void){
         goalArr[i] = num;
     }
     int oneToN =1;
-    //push & pop - resultStack 가능 여부 검사
+    //push & pop - 가능 여부 검사
     for (int j = 1; j <= 2*N; j++){
         //goalArrIdx 의 원소가 i보다 클 때 : push
         //goalArrIdx 의 원소가 i와 같을 때 : push
         //goalArrIdx 의 원소가 i보다 작을 때 : pop 
-        //-> 이때 검사 goal 원소가 맞는지 ? 아니면 no 출력 맞으면 인덱스 +1 & roop 지속
+        //pop -> 이때 검사, goal 원소가 맞는지 ? 아니면 no 출력 loop 탈출 / 맞으면 인덱스 +1 & loop 지속
         if (oneToN <= goalArr[goalArrIdx]){
             stack.push(oneToN);
             resultPrint.append("+\n");
             oneToN = oneToN+1;
         }
-
         else{
             if( !stack.empty() && stack.top() == goalArr[goalArrIdx]){
                 resultPrint.append("-\n");

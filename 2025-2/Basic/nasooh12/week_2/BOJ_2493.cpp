@@ -2,6 +2,8 @@
 #include <stack>
 using namespace std;
 int main(void){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     int N;  // 탑의 수
     cin >> N;
     stack<int> towerStack; // 탑의 높이 스택
@@ -9,7 +11,7 @@ int main(void){
     int resultArr[N]; // 결과 출력용 배열 
     //int targetIdx = N-1; //stack1size
 
-    /*stack1 , stack2
+    /*stack1(towerStack) , stack2(undoStack)
     입력받은대로 push 하여 stack 1 에 저장 
     shot 변수에 stack1의 top을 저장해두고 stack1.pop
     - stack1의 top과 shot을 비교하여 shot보다 top이 크면 수신호 적중 -> 루프 탈출
@@ -74,11 +76,8 @@ int main(void){
             }
         }
     }
-    
     for(int i=0;i<N;i++){
         cout << resultArr[i] << ' ';
     }
-    
-
     return 0;
 }
